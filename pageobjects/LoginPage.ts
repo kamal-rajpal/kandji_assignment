@@ -17,7 +17,8 @@ constructor(page:Page)
     this.userName = page.locator("#username");
     this.password = page.locator("#password");
     this.authToken = page.getByRole('textbox', { name: 'Enter your one-time code' });
-    this.continue= page.getByRole('button', { name: 'Continue' }) 
+    this.continue= page.getByRole('button', { name: 'Continue' }) ;
+    
 }
 
 async goTo()
