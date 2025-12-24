@@ -39,7 +39,7 @@ export default defineConfig({
       name: 'chrome',
       use: { ...devices['Desktop Chrome'],
         screenshot: 'on',
-        headless: false,
+        headless: true,
         trace:'retain-on-failure'
        },
     }
@@ -54,7 +54,7 @@ export default defineConfig({
       name: 'safari',
       use: { ...devices['Desktop Safari'],   
         screenshot: 'on',
-        headless: false,
+        headless: true,
         trace:'on'},
     },
 
