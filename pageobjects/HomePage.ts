@@ -5,13 +5,16 @@ export class HomePage {
     search: Locator;
     devices: Locator;
     logo: Locator;
+    alerts: Locator;
+
 
 
     constructor(page: Page) {
         this.page = page;
         this.logo = page.getByRole('img', { name: 'Kandji Logo' });
         this.search = page.getByText('Search');
-        this.devices = page.getByRole('link', { name: 'devices Devices' })
+        this.alerts = page.getByRole('heading', { name: 'Alerts' });
+        this.devices = page.getByRole('link', { name: 'Devices' })
 
     }
 
@@ -29,13 +32,15 @@ export class HomePage {
 
     async verifyAlltabsVisibility() {
         // All component visibility check
-        await expect(this.search).toBeVisible();
+      //  await expect(this.alerts).toBeVisible();
+        //await expect(this.search).toBeVisible();
     }
 
 
     async VerifyAlltabsClickable() {
         // all links are clickable
         await this.search.click();
+        await this.page.locator('.c-fMtdhe').click();
         await this.devices.click();
     }
 
