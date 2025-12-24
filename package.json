@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "onetest":"npx playwright test tests/Login.spec.ts --headed",
-    "all":"npx playwright test tests --headed",
-    "login":"npx playwright test tests --headed --grep @Login",
+    "onetest": "npx playwright test tests/Login.spec.ts --headed",
+    "all": "npx playwright test tests --headed",
+    "login": "npx playwright test tests --headed --grep @Login",
     "NewConfig": "npx playwright test tests --headed --config=",
     "safariLogin": "npx playwright test tests/Login.spec.ts --project=safari",
     "chromeLogin": "npx playwright test tests/Login.spec.ts --project=chrome"
-    
   },
   "keywords": [],
   "author": "",
