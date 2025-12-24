@@ -11,9 +11,9 @@ for (const data of dataset) {
         await loginPage.goTo();
         await loginPage.validLogin(data.username, data.password);
         const homePage = poManager.getHomePage();
+        await homePage.verifyAlltabsVisibility();
         await homePage.verifyPageTitle();
         await homePage.verifyCompanyLogoVisible();
-        await homePage.verifyAlltabsVisibility();
         await homePage.VerifyAlltabsClickable();
 
     });
