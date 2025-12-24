@@ -16,6 +16,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
+      env:
+        MFA_TOTP_SECRET: ${{ secrets.MFA_TOTP_SECRET }}
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
